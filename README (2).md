@@ -93,8 +93,43 @@ This is a web-based job portal application built using Django. The project aims 
 - Employers: Sign up, post job vacancies, and manage applications received from job seekers.
 
 - Admin: Use the admin panel to manage users, jobs, and other data.
+
+
+- ### Certificate Of Merit
+
+<p align="center">
+    <img src="Job_Portal_sceernshots/Screenshot 2024-07-20 152841.png" width="800" />
+</p>
+
 ## Demo
 
-Insert gif or link to demo
+Some Screenshots of the website
 
-![](URL)
+<p align="center">
+    <img src="Job_Portal_sceernshots/Screenshot 2024-07-20 144608.png" width="800" />
+</p>
+
+<p align="center">
+    <img src="Job_Portal_sceernshots/Screenshot 2024-07-20 144646.png" width="800" />
+</p>
+
+<p align="center">
+    <img src="Job_Portal_sceernshots/Screenshot 2024-07-20 144708.png" width="800" />
+</p>
+
+<p align="center">
+    <img src="Job_Portal_sceernshots/Screenshot 2024-07-20 144742.png" width="800" />
+</p>
+
+<p align="center">
+    <img src="Job_Portal_sceernshots/Screenshot 2024-07-20 144827.png" width="800" />
+</p>
+
+<p align="center">
+    <img src="Job_Portal_sceernshots/Screenshot 2024-07-20 144847.png" width="800" />
+</p>
+
+<p align="center">
+    <img src="Job_Portal_sceernshots/Screenshot 2024-07-20 144902.png" width="800" />
+</p>
+
