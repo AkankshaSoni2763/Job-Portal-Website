@@ -1,0 +1,291 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal- Find Your Job </title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" href="{% static 'img/favicon.png' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+  <style>
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .modal-top {
+      margin-top: 3rem;
+    }
+
+    /* .custom-navbar-shadow {
+      box-shadow: 0px 3px 3px 0px #e28ed7;
+      /* Adjust the color and opacity here 
+    }*/
+    .navbar-brand {
+      font-size: 2rem;
+      font-family: 'Dancing Script', cursive;
+      color: green;
+      /* position: fixed; */
+    }
+
+    .nav-link {
+      color: rgb(10, 10, 94);
+      /* position: fixed; */
+
+    }
+
+    .nav-link:hover {
+      color: red;
+      transition: 0.3s;
+      /* position: fixed; */
+
+
+    }
+
+    .nav-item {
+      color: rgb(7, 7, 78);
+      font-weight: 500;
+      padding-left: 35px;
+      /* position: fixed;     */
+
+
+    }
+
+    .btn0 {
+      height: 52px;
+      width: 130px;
+      outline: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: all 0.4s;
+      background-color: rgb(248, 83, 83);
+      border-radius: 20px;
+      /* position: fixed; */
+    }
+
+    .btn0:hover {
+      background-color: rgb(214, 11, 11);
+      transition: all 0.4s;
+      /* position: fixed; */
+    }
+
+    .btn1 {
+      height: 52px;
+      width: 130px;
+      background-color: transparent;
+      color: rgb(48, 20, 20);
+      outline: none;
+      border: 2px solid rgb(248, 20, 20);
+    }
+
+    .btn1:hover {
+      background-color: rgb(214, 11, 11);
+      transition: all 0.4s;
+      color: white;
+      border: none;
+      outline: none;
+
+    }
+
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .myimg {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color:rgb(243, 166, 166);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(91, 18, 140, 0.244);
+    }
+
+    .profile {
+
+      text-align: center;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">JOb Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+         
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/about/">
+              About Us
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a href="/contact/" class="nav-link abled">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <a href="/login/" class="btn0 mx-2"  style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">Login</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container myimg">
+    <div class="profile">
+      <img src="{% static 'img/Untitled.jpg' %}" alt="My Photo">
+      <h2>About Me</h2>
+    </div>
+    <div class="intro">
+      <p><b>Hey everyone,I am creater of this Job Portal Website.</b></p>
+      <p> My name is <strong>Akanksha Soni</strong> .I was born in Uttar Pradesh at 27 Jun 2003.Currently I am pursuing B-tech
+        from LNCT Bhopal and my branch is <strong>Electronics and Communication Enginnering.</strong> .
+        Currently I am in 7th sem and my specific goal is to become good engineer which i will contribute to this world
+        for betterment.
+        My short term goal is to explore as much as I can in full stack development.My long
+        term goal is to become good daughter of my parents,
+        I can give everything that they want.</p>
+    </div>
+    <div class="details">
+      <p><strong>About Our Job Portal Website:</strong></p>
+
+
+      <p>
+        Welcome to our online Job Portal Platform, where your voice matters! Our platform is designed to provide a
+        convenient and secure way for users to participate in various voting processes, ranging from elections to
+        surveys and polls.
+
+      </p>
+
+      <p><strong>Our Mission:</strong></p>
+      <p> At our Job Portal Website, our mission is to revolutionize the job search process by leveraging cutting-edge technology.
+         We understand the challenges faced by job seekers in today's competitive market, which is why we've
+          integrated an advanced Applicant Tracking System (ATS) into our platform. This innovative feature
+           analyzes resumes based on industry-specific keywords, formatting, and other criteria to generate an ATS score. 
+      </p>
+
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Comprehensive Job Listings:
+          Access a vast database of job listings from various industries and sectors.</li>
+        <li>
+          Personalized Recommendations:
+Receive personalized job recommendations tailored to individual skills, experience, and preferences.
+        </li>
+        <li>User-Friendly Interface:
+          Navigate our platform with ease thanks to our intuitive and user-friendly interface.</li>
+        <li>ATS Score for Resumes: Our platform offers an ATS scoring system that evaluates resumes against
+           job descriptions and ranks them based on compatibility with employer requirements. This score helps 
+           candidates understand how well their resumes align with the needs of hiring managers.</li>
+      </ul>
+
+      <p><strong>How It Works:</strong></p>
+      <ol>
+        <li>Job Seekers:
+          Create a profile highlighting your skills, experience, and career objectives.
+          Browse through job listings or receive personalized job recommendations.
+          Apply for jobs directly through our platform and track application statuses.</li>
+        <li>Employers:
+          Create an account to post job listings and attract top talent.
+          Utilize our advanced search filters to find candidates that meet your specific criteria.
+          Manage job applications, schedule interviews, and communicate with candidates seamlessly.</li>
+        <li>ATS Analysis: Our ATS system automatically analyzes each resume, taking into 
+          
+          account factors such as keyword relevance, formatting, and overall content quality.
+
+          Receive ATS Score: Candidates receive an ATS score for their resume, 
+          along with actionable feedback and recommendations for improvement.</li>
+      </ol>
+
+      <p><strong>Get Involved:</strong></p>
+      <p>Join our job portal community today to explore exciting career opportunities, 
+        optimize your job search, and connect with top employers.</p>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- footer  -->
+  <footer class="bg-body-tertiary text-center">
+    <div class="container p-4 pb-0">
+      <section class="mb-4">
+
+        <a href="#" class="fa fa-twitter"></a>
+
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/akanksha-soni-628960236/" class="fa fa-linkedin"></a>
+        <a href="https://github.com/AkankshaSoni2763"><i class="fa fa-github"></i></a>
+      </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Job Portal.com. All rights reserved.
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

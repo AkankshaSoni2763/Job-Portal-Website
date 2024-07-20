@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'img/favicon.png' %}">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script> -->
+
+  <link rel="icon" href="{% static 'img/favicon.png' %}">
+  <style>
+    /* Default styles */
+    /* Apply styles for smaller screens */
+    @media only screen and (min-width: 768px) {
+      /* Apply styles for tablets and larger devices */
+    }
+
+    @media only screen and (min-width: 992px) {
+      /* Apply styles for small desktops and larger devices */
+    }
+
+    @media only screen and (min-width: 1200px) {
+      /* Apply styles for large desktops and larger devices */
+    }
+
+
+
+
+
+
+
+
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      min-height: 100vh;
+      background:url('{% static "img/pic28.jpg" %}')no-repeat;
+      /* background-color: url(./img/pic1.jpg)no-repeat; */
+      background-size: cover;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      margin-left: 4rem;
+      width: 50rem;
+
+    }
+
+    .sidebar {
+      background-color: #34495e;
+      color: white;
+      width: 220px;
+      padding: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+    }
+
+    .job-listings {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: calc(100% - 220px);
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* ... Existing job card styles ... */
+
+    .logout-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #e74c3c;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .logout-button:hover {
+      background-color: #c0392b;
+    }
+
+
+    .job-listings {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .job-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      padding: 15px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .active-tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #28a745;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+
+    /* .inactive-tag {
+      background-color: #961818; */
+      /* Background color */
+      /* color: #666; */
+      /* Text color */
+      /* padding: 5px 10px; */
+      /* Padding */
+      /* border-radius: 5px; */
+      /* Rounded corners */
+      /* font-size: 12px; */
+      /* Font size */
+      /* font-weight: bold; */
+      /* Bold font */
+    /* } */
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .job-location {
+      color: #777777;
+    }
+
+    .job-details p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .apply-button {
+      display: block;
+      width: 90%;
+      padding: 10px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin-top: 40%;
+      text-align: center;
+    }
+
+    .apply-button:hover {
+      background-color: #218838;
+    }
+
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+    }
+
+    .sidebar i {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    {% include 'candidate/navbar.html' %}
+    <div class="job-listings">
+      {% for job in jobpost %}
+      <div class="job-card">
+
+        <!-- {% if job.lastDateToApply < today %}
+                <div class="inactive-tag">Inactive</div>
+                {% endif %} -->
+
+        <div class="active-tag">Active</div>
+        <br>
+
+
+
+        <div class="job-header">
+          <h3>{{job.title}}</h3>
+          <span class="job-location">{{job.address}}</span>
+        </div>
+        <div class="job-details">
+          <p>Company: {{job.compnayName}}</p>
+          <p>Salary: ${{job.salaryLow}} - ${{job.salaryHigh}}</p>
+          <p>Last Date: {{job.lastDateToApply}}</p>
+        </div>
+        <a class="apply-button" href="{% url 'applyjob' job.id %}" style="text-decoration: none;
+            color: inherit;">Apply Now</a>
+      </div>
+      {% endfor %}
+      <!-- Add more job cards here -->
+    </div>
+  </div>
+</body>
+
+</html>

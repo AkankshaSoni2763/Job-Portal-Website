@@ -1,0 +1,529 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+  <title>Job Portal-Find Your Job</title>
+
+  <style>
+
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+
+    }
+
+    .navbar-brand {
+      font-size: 2rem;
+      font-family: 'Dancing Script', cursive;
+      color: green;
+      /* position: fixed; */
+    }
+
+    .nav-link {
+      color: rgb(10, 10, 94);
+      /* position: fixed; */
+
+    }
+
+    .nav-link:hover {
+      color: red;
+      transition: 0.3s;
+      /* position: fixed; */
+
+
+    }
+
+    .nav-item {
+      color: rgb(7, 7, 78);
+      font-weight: 500;
+      padding-left: 35px;
+      /* position: fixed;     */
+
+
+    }
+
+    .btn0 {
+      height: 52px;
+      width: 130px;
+      outline: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: all 0.4s;
+      background-color: rgb(213, 68, 68);
+      border-radius: 20px;
+      /* position: fixed; */
+    }
+
+    .btn0:hover {
+      background-color: rgb(214, 11, 11);
+      transition: all 0.4s;
+      /* position: fixed; */
+    }
+
+    .btn1 {
+      height: 52px;
+      width: 130px;
+      background-color: transparent;
+      color: rgb(48, 20, 20);
+      outline: none;
+      border: 2px solid rgb(248, 20, 20);
+    }
+
+    .btn1:hover {
+      background-color: rgb(214, 11, 11);
+      transition: all 0.4s;
+      color: white;
+      border: none;
+      outline: none;
+
+    }
+
+    /* main section */
+
+
+    .main{
+      background:url('{% static "img/pic31.webp" %}')no-repeat ;
+      /* background-color: url(./img/pic1.jpg)no-repeat; */
+      background-size: cover;
+      /* background-attachment: fixed; */
+      min-height: 95vh;
+      min-width: 50px;
+      width: 100%;
+      padding: 30px;
+    
+
+    }
+
+    .main h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      color: rgb(7, 7, 78);
+
+    }
+
+    .main input {
+      height: 71px;
+      width: 70%;
+      border: none;
+      outline: none;
+      padding: 15px;
+
+    }
+
+    .btn2 {
+      height: 70px;
+      width: 25%;
+      background-color: rgb(243, 73, 73);
+      color: white;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.4s;
+      margin: -4px;
+      /* border-radius: 10px; */
+    }
+
+
+    .btn2:hover {
+      background: rgb(214, 11, 11);
+      transition: all 0.4s;
+    }
+
+    .red {
+      color: red;
+
+    }
+
+    .ceta h1 {
+      font-size: 3.5rem;
+      color: rgb(7, 7, 78);
+
+    }
+
+    .ceta .card:hover {
+      color: red;
+      cursor: pointer;
+      transition: all 0.3s;
+      /* padding: 30px; */
+
+      -webkit-box-shadow: -2px 3px 22px -11px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -2px 3px 22px -11px rgba(0, 0, 0, 0.75);
+      box-shadow: -2px 3px 22px -11px rgba(0, 0, 0, 0.75);
+
+    }
+
+    .btn3 {
+      height: 70px;
+      width: 70%;
+
+      border: 1px solid rgb(230, 137, 100);
+      background: transparent;
+      border-radius: 5px;
+      color: rgb(130, 130, 231);
+      transition: all 0.4s;
+      /* text-align: center; */
+
+
+    }
+
+    .btn3:hover {
+      background: rgb(230, 137, 100);
+      color: white;
+      border: none;
+      outline: none;
+      transition: all 0.4s;
+    }
+
+    .resume {
+      background: linear-gradient(rgb(4, 11, 775, 0.719), rgba(206, 181, 193, 0.73)), url('{% static "img/pic12.avif" %}') no-repeat;
+      background-size: cover;
+      height: 90vh;
+      width: 100%;
+    }
+
+    .resume h1 {
+      font-size: 3.7rem;
+      text-align: center;
+    }
+
+    .btn4 {
+      text-align: center;
+      justify-content: center;
+    }
+
+    /* .container{
+      position: fixed;
+    } */
+
+    .abled{
+      cursor: pointer;
+    }
+
+    .navbar{
+      padding: 20px;
+    }
+
+    @keyframes moveText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0);}
+    }
+
+
+    .moving-text {
+            text-align: left;
+            margin-top: 20px; /* Adjust as needed */
+            animation: moveText 7s linear infinite; /* Change the duration and timing function as needed */
+            color:rgb(243, 73, 73);
+            font-size: 15px;
+           
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- nav bar -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">JOb Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+         
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/about/">
+              About Us
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a href="/contact/" class="nav-link abled">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <a href="/login/" class="btn0 mx-2"  style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">Login</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- <div class="moving-text">
+     Text that moves from right to left -->
+    <!-- <span>Find your dream job with our job portal website and take the next step in your career!</span></div> -->
+
+  <!-- main section -->
+
+  <section class="main d-flex align-items-center">
+    <div class="container text">
+      <div class="row">
+        <div class="col-lg-7">
+          <!-- <h1>Fuel Your Ambition, Find Your Job</h1>
+          <input type="text" placeholder="Job Title or Keyword">
+          <button class="btn2 mt-5"> Find Job</button> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--ceta section  -->
+
+  <section class="ceta py-5">
+    <div class="container-fluid py-5 text-center">
+      <p class="red">FEATURED TOUR PAKAGES</p>
+      <h1>Browse Top Categories </h1>
+      <div class="row py-5">
+        <div class="col-lg-11 m-auto pt-3">
+          <div class="row py-5">
+            <div class="col-lg-3">
+              <div class="card py-3">
+                <div class="card-body">
+                  <img src="{% static 'img/pic4.jpg' %}" alt="web" width="150px" height="100px">
+                  <h6>Web Devloper</h6>
+                  <h6 class="red">(100)</h6>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card py-3">
+                <div class="card-body">
+                  <img src="{% static 'img/pic5.png' %}" alt="app" width="150px" height="100px">
+                  <h6>App Developer</h6>
+                  <h6 class="red">(80)</h6>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card py-3">
+                <div class="card-body">
+                  <img src="{% static 'img/pic6.jpg' %}" alt="data" width="150px" height="100px">
+                  <h6>Data Analytics</h6>
+                  <h6 class="red">(20)</h6>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card py-3">
+                <div class="card-body">
+                  <img src="{% static 'img/pic7.jpg' %}" alt="network" width="150px" height="100px">
+                  <h6>Network Engineer</h6>
+                  <h6 class="red">(50)</h6>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="card py-3">
+                <div class="card-body">
+                  <img src="{% static 'img/pic8.jpg' %}" alt="software" width="150px" height="100px">
+                  <h6>Software Engineer</h6>
+                  <h6 class="red">(100)</h6>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card py-3">
+                <div class="card-body">
+                  <img src="{% static 'img/pic9.png' %}" alt="robotics" width="150px" height="100px">
+                  <h6>Robotics Engineer</h6>
+                  <h6 class="red">(30)</h6>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card py-3">
+                <div class="card-body">
+                  <img src="{% static 'img/pic10.jpg' %}" alt="devops"  width="150px" height="100px">
+                  <h6>DevOps Engineer</h6>
+                  <h6 class="red">(60)</h6>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card py-3">
+                <div class="card-body">
+                  <img src="{% static 'img/pic11.jpg' %}" alt="electrical"  width="150px" height="100px">
+                  <h6>Electrical Engineer</h6>
+                  <h6 class="red">(786)</h6>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row py-5">
+
+            <div class="col-lg-5 m-auto">
+              <button class=" btn3">BROWSE ALL SECTORS</button>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- resume -->
+  <section class="resume py-5 text-center text-white">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-lg-10">
+          <p class="pb-3">FEATURED TOURS PACKAGES </p>
+          <h1>Find Your ATS Score for Your Resume.</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5">
+          <button class="btn3">UPLOAD YOUR RESUME</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section -->
+
+  <!-- <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+      </footer> -->
+
+
+  <!-- <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <p class="text-body-secondary">© 2024</p>
+      </div>
+
+      <div class="col mb-3">
+
+      </div>
+
+      <div class="col mb-3">
+        <h5> Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Services</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Information</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Email Address</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Phone</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Social Media</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">LinkedIn</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Twitter</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Telegram</a></li>
+        </ul>
+      </div>
+    </footer> -->
+
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">Email Address: JobPortal.com</p>
+        <p class="text-center text-body-secondary">Contact: +91 9799825684</p>
+        <p class="text-center text-body-secondary">© 2024 JobPortal.com, Inc</p>
+      </footer>
+    </div>
+    
+  
+  </div>
+
+  
+
+  
+
+
+
+
+</body>
+
+</html>
